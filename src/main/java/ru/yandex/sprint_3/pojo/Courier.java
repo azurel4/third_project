@@ -1,6 +1,6 @@
-package ru.yandex.sprint_3;
+package ru.yandex.sprint_3.pojo;
 
-   public class Courier {
+public class Courier {
 
     private String login;
     private String password;
