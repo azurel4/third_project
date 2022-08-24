@@ -1,5 +1,7 @@
-/*package ru.yandex.sprint_3;
+package ru.yandex.sprint_3;
 
+import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -18,23 +20,37 @@ public class CourierLoginWithoutValidField {
     @Before
     public void setUp(){
         courierForLogin = CourierGenerator.getWithoutTwoValidFields();
-        courier = CourierGenerator.getDefault();
+        //courier = CourierGenerator.getDefault();
         courierClient = new CourierClient();
     }
-    @Test
-    public void courierCanBeCreated(){
-        ValidatableResponse response = courierClient.create(courier);
-        int statusCode = response.extract().statusCode();
-        assertEquals("Status code is incorrect", 201, statusCode);
 
-        ValidatableResponse responseWrongLogin = courierClient.login(CourierCredentials.loginFrom(courier));
-        courierId = responseWrongLogin.extract().path("id");
-        System.out.println(courierId);
+//    @After
+//    public void tearDown(){
+//        courierClient.delete(courierId);
+//    }
+
+    @Test
+    public void courierCantBeCreated(){
+//        ValidatableResponse response = courierClient.create(courier); //создаю курьера
+//        int statusCode = response.extract().statusCode();
+//        //assertEquals("Status code is incorrect", 201, statusCode);
+//
+//        ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(courier)); //логин курьера для получения id, чтобы удалить в конце теста
+//        int loginStatusCode = loginResponse.extract().statusCode();
+//        assertEquals("Status code is incorrect", 200, loginStatusCode);
+//
+//        courierId = loginResponse.extract().path("id");
+//        assert(courierId > 0);
+
+
+
+
+        ValidatableResponse responseWrongLogin = courierClient.login(CourierCredentials.loginFrom(courierForLogin)); //логин курьера только с одним полем
 
         String wrongLoginMessage = responseWrongLogin.extract().path("message");
         System.out.println(wrongLoginMessage);
 
     }
 
-}*/
+}
 

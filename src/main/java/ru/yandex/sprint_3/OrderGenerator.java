@@ -2,7 +2,7 @@ package ru.yandex.sprint_3;
 
 public class OrderGenerator {
     public static Order getDefault() {
-        return new Order("gleg", "hgevin", "+7 800 355 35 35", "60",
+        return new Order("gl15eg", "hgevin", "+7 800 355 35 35", "60",
                 "2022-10-10", "fgggg", new String[]{"BLACK", "GREY"}, "gghjj", "fjfjf");
     }
 

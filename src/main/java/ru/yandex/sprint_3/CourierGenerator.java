@@ -3,15 +3,15 @@ package ru.yandex.sprint_3;
 public class CourierGenerator {
 
     public static Courier getDefault() {
-        return new Courier("h56yfh", "8f6huf", "8f6s8f");
+        return new Courier("hf56e7dаdyfh", "8f6fe7dhhduf", "8f7fd66ed8f");
     }
 
     public static Courier getWithoutOneValidField() {
-        return new Courier("89s768y", "8f6us");
+        return new Courier("8f67dhehuf", "8f66ed78f");
     }
 
     public static Courier getWithoutTwoValidFields() {
-        return new Courier("89su6f8");
+        return new Courier("h56аtydfh");
 
     }
 }
