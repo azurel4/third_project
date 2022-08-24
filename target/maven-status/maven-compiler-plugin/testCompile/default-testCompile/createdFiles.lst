@@ -1,1 +1,4 @@
-ru/yandex/sprint_3/TestCreateAndDeleteCourier.class
+ru/yandex/sprint_3/CourierCreateWithoutValidFieldTest.class
+ru/yandex/sprint_3/CourierLoginTest.class
+ru/yandex/sprint_3/PlaceOrderTest.class
+ru/yandex/sprint_3/CourierCreateTest.class

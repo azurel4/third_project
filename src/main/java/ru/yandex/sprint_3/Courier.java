@@ -1,4 +1,4 @@
-package ru.yandex.sprint_3.pojo;
+package ru.yandex.sprint_3;
 
 public class Courier {
 
@@ -6,18 +6,19 @@ public class Courier {
     private String password;
     private String firstName;
 
-    public Courier(String login, String password, String firstName){
+    public Courier(String login, String password, String firstName) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
     }
 
-    public Courier(String login, String password){
-        this.login = login;
+    public Courier(String password, String firstName) {
         this.password = password;
+        this.firstName = firstName;
     }
 
-    public Courier(){
+    public Courier(String login) {
+        this.login = login;
     }
 
     public String getLogin() {

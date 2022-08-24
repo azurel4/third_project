@@ -1,2 +1,8 @@
-ru/yandex/sprint_3/pojo/CourierApi.class
-ru/yandex/sprint_3/pojo/Courier.class
+ru/yandex/sprint_3/Order.class
+ru/yandex/sprint_3/OrderClient.class
+ru/yandex/sprint_3/CourierClient.class
+ru/yandex/sprint_3/Courier.class
+ru/yandex/sprint_3/RestClient.class
+ru/yandex/sprint_3/CourierCredentials.class
+ru/yandex/sprint_3/OrderGenerator.class
+ru/yandex/sprint_3/CourierGenerator.class

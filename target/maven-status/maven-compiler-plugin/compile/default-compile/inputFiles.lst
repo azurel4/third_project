@@ -1,2 +1,8 @@
-/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/pojo/CourierApi.java
-/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/pojo/Courier.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/OrderGenerator.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/Courier.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/OrderClient.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/CourierCredentials.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/CourierGenerator.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/CourierClient.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/RestClient.java
+/home/larisa/my_java/third_project/src/main/java/ru/yandex/sprint_3/Order.java
