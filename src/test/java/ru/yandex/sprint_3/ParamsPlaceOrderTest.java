@@ -30,7 +30,7 @@ public class ParamsPlaceOrderTest {
     public void createOrderTest(){
         Order order = new Order("hdhdj", "jhjj", "90987777", "60", "2022-09-29", "hhhh", color, "jhuu", "hjjn");
         OrderClient orderClient = new OrderClient();
-        ValidatableResponse response = orderClient.createWithParams(order);
+        ValidatableResponse response = orderClient.create(order);
 
         int statusCode = response.extract().statusCode();
         assertEquals("Status code is incorrect", 201, statusCode);
