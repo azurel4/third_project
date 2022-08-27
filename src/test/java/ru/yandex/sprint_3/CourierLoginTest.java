@@ -1,8 +1,12 @@
 package ru.yandex.sprint_3;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class CourierLoginTest {
@@ -18,23 +22,21 @@ public class CourierLoginTest {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         courierClient.delete(courierId);
     }
 
     @Test
-    public  void courierCanLoginTest(){
+    @DisplayName("Логин курьера")
+    @Description("Проверить что возвращается id")
+    public void courierCanLoginTest() {
         ValidatableResponse response = courierClient.create(courier);
-
-        //int statusCode = response.extract().statusCode();
-
-        //boolean isCreated = response.extract().path("ok");
 
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(courier));
         int loginStatusCode = loginResponse.extract().statusCode();
         assertEquals("Status code is incorrect", 200, loginStatusCode);
 
         courierId = loginResponse.extract().path("id");
-        assert(courierId > 0);
+        assert (courierId > 0);
     }
 }

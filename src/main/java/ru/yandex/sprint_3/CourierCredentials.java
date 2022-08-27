@@ -26,17 +26,16 @@ public class CourierCredentials {
         this.password = password;
     }
 
-    public CourierCredentials(String login){
+    public CourierCredentials(String login) {
         this.login = login;
     }
 
-    public static CourierCredentials loginFrom(Courier courier){
+    public static CourierCredentials loginFrom(Courier courier) {
         return new CourierCredentials(courier.getLogin());
     }
 
-
-    public static CourierCredentials from(Courier courier){
-        return new CourierCredentials(courier.getLogin(),courier.getPassword());
+    public static CourierCredentials from(Courier courier) {
+        return new CourierCredentials(courier.getLogin(), courier.getPassword());
     }
 
 }

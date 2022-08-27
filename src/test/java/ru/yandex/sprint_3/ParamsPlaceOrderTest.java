@@ -1,8 +1,12 @@
 package ru.yandex.sprint_3;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -27,7 +31,9 @@ public class ParamsPlaceOrderTest {
     }
 
     @Test
-    public void createOrderTest(){
+    @DisplayName("Создание заказа")
+    @Description("Проверка всех возможных вариантов BLACK, GREY, оба цвета, без цвета и проверка что тело содержит track")
+    public void createOrderTest() {
         Order order = new Order("hdhdj", "jhjj", "90987777", "60", "2022-09-29", "hhhh", color, "jhuu", "hjjn");
         OrderClient orderClient = new OrderClient();
         ValidatableResponse response = orderClient.create(order);
@@ -36,7 +42,7 @@ public class ParamsPlaceOrderTest {
         assertEquals("Status code is incorrect", 201, statusCode);
 
         int track = response.extract().path("track");
-        assert(track > 0);
+        assert (track > 0);
     }
 
 }

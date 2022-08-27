@@ -1,8 +1,11 @@
 package ru.yandex.sprint_3;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class CourierCreateWithoutValidFieldTest {
@@ -11,17 +14,19 @@ public class CourierCreateWithoutValidFieldTest {
     private CourierClient courierClient;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         courier = CourierGenerator.getWithoutOneValidField();
         courierClient = new CourierClient();
     }
 
     @Test
-    public void courierWithoutValidFieldCantBeCratedTest(){
+    @DisplayName("Создание курьера не возможно без валидного поля")
+    @Description("Проверка статуса 400 и сообщения")
+    public void courierWithoutValidFieldCantBeCratedTest() {
         ValidatableResponse response = courierClient.create(courier);
 
         int statusCode = response.extract().statusCode();
-        assertEquals("Status code is incorrect",  400, statusCode);
+        assertEquals("Status code is incorrect", 400, statusCode);
 
         String message = response.extract().path("message");
         assertEquals("Wrong message", "Недостаточно данных для создания учетной записи", message);

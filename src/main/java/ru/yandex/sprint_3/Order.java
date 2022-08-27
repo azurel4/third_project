@@ -1,8 +1,6 @@
 package ru.yandex.sprint_3;
 
 public class Order {
-
-
     private String address;
 
     public Order(String address, String metroStation, String phone, String rentTime, String deliveryDate, String comment, String[] color, String firstName, String lastName) {
